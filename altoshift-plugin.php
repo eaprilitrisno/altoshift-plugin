@@ -16,7 +16,19 @@ Text Domain: altoshift-plugin
 
 defined( 'ABSPATH' ) or die( 'youre die human!' );
 
-if ( ! function_exists('add_action')){
-	echo 'hey , you cant access this file';
-	exit;
+
+class AltoshiftPlugin {
+	function __construct($args) {
+		echo $args;
+	}
 }
+
+if (class_exists('AltoshiftPlugin')){
+	$altoshiftPlugin = new AltoshiftPlugin('plugin installed!');
+}
+
+// function customFunction($args){
+// 	echo $args;
+// }
+
+// customFunction('hallo this is my world');
