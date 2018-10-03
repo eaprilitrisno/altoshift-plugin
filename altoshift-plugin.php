@@ -13,3 +13,10 @@ Author URI: eatrisno.id
 License: GPLv2 or later
 Text Domain: altoshift-plugin
 */
+
+defined( 'ABSPATH' ) or die( 'youre die human!' );
+
+if ( ! function_exists('add_action')){
+	echo 'hey , you cant access this file';
+	exit;
+}
